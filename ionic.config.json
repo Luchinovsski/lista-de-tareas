@@ -1,0 +1,7 @@
+{
+  "name": "proyecto-tarea",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

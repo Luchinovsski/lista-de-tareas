@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Organizador de Tareas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+
+  <!-- Formulario para agregar/editar tarea -->
+  <ion-item>
+    <ion-label position="floating">Título de la tarea</ion-label>
+    <ion-input [(ngModel)]="newTask.title" placeholder="Escribe el título" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Descripción</ion-label>
+    <ion-input [(ngModel)]="newTask.description" placeholder="Escribe la descripción" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Categoría</ion-label>
+    <ion-input [(ngModel)]="newTask.category" placeholder="Escribe la categoría" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Prioridad</ion-label>
+    <ion-select [(ngModel)]="newTask.priority" placeholder="Selecciona la prioridad" required>
+      <ion-select-option value="alta">Alta</ion-select-option>
+      <ion-select-option value="media">Media</ion-select-option>
+      <ion-select-option value="baja">Baja</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Fecha de vencimiento</ion-label>
+    <ion-datetime [(ngModel)]="newTask.dueDate" placeholder="Selecciona la fecha" required></ion-datetime>
+  </ion-item>
+
+  <!-- Botón que cambia entre 'Agregar tarea' y 'Actualizar tarea' -->
+  <ion-button expand="full" (click)="addTask()">
+    Guardar
+  </ion-button>
+</ion-content>
